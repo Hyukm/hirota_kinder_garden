@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+/*--------------------------------
+    お問い合わせテキスト
+--------------------------------*/
+/* https://www.yokohama-weekly.jp/contact/ と https://www.yokohama-weekly.jp/room/maita1_e-flat/を参照*/
+
+
+.preferred_date span:nth-of-type(2),
+.preferred_date span:nth-of-type(3) {
+    display: block;
+    margin-top: 20px;
+}
+
+.contact_label {
+    align-items: center;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+}
+
+.contact_label span:first-child {
+    font-weight: 700;
+    text-align: left;
+}
+
+.contact_label span:nth-child(2) {
+    color: #fff;
+    background-color: #e63c3c;
+    text-align: center;
+    margin-left: 5px;
+    height: 25px;
+    border-radius: 3px;
+    padding: 2px 4px;
+    line-height: 1.3;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.edit_contents li {
+    list-style-type: none !important;
+}
+
+.contact_radio ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.wpcf7-list-item {
+    margin: 0 auto 0 0;
+    position: relative;
+    padding-left: 30px;
+    width: 50%;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/* プレースホルダーをフォーカス時に消す */
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+    color: transparent;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/*
+..contact_right_radio {
+    width: 60%;
+    padding: 35px 0;
+}
+*/
+
+/*--------------------------------
+    ラジオボタン
+--------------------------------*/
+
+input[type="radio"] {
+    opacity: 0;
+    /* デフォルトのボタンを非表示 */
+    position: absolute;
+}
+
+input[type="radio"]:checked+.wpcf7-list-item-label::after {
+    opacity: 1;
+}
+
+.wpcf7-list-item-label::before {
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #CCCCCC;
+    left: 5px;
+    top: 5px;
+}
+
+.wpcf7-list-item-label::after {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ed828b;
+    left: 9px;
+    top: 9px;
+    opacity: 0;
+    transition: .3s;
+}
+
+/*-------------------------------- */
+
+.main .edit_contents {
+    max-width: 860px;
+}
+
+.contact_radio,
+.text_short,
+.text_long {
+    border-bottom: 2px solid #e2e2e2;
+    padding: 0;
+}
+
+.text_short div input,
+.text_long div input {
+    width: 100%;
+    /* テキストボックスの枠線を消す */
+    outline: none;
+    /* 余白 */
+    padding-left: 8px;
+}
+
+.contact_input {
+    width: 60%;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 35px 0;
+}
+
+.contact_input span text {
+    margin-bottom: 10px;
+}
+
+.contact_input span textarea {
+    width: 100%;
+    height: 240px;
+    border: none;
+    background-color: #F3F1F1;
+    font-size: 1.5rem;
+    padding: 8px;
+    outline: none;
+    line-height: 1.8;
+}
+
+form .flex {
+    justify-content: space-between;
+}
+
+.submit {
+    padding: 0 200px;
+    margin-bottom: -20px;
+    text-align: center;
+}
+
+.submit input {
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    background-color: #ED828B;
+    font-size: 2.6rem;
+    color: #fff;
+    display: inline-flex;
+    padding: 0;
+    align-items: center;
+    border-radius: 1rem;
+    height: 6rem;
+    position: relative;
+    opacity: 1;
+    line-height: 2.3em;
+    cursor: pointer;
+}
+
+:where(input, select) {
+    margin-left: 0;
+    height: 40px;
+    border: none;
+    background-color: #F3F1F1;
+    font-size: 1.5rem;
+}
+
+.wpcf7-not-valid-tip {
+    text-align: left;
+    font-family: YakuHanJP_Noto, "Noto Sans JP", sans-serif;
+    margin-top: 10px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 0 10px 43px;
+}
+
+.wpcf7-spinner {
+    background-image: url(../img/icon_spinner.gif);
+    margin: 0 auto;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output, .wpcf7 form.sent .wpcf7-response-output {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 640px) {
+
+    .contact_input {
+        padding: 10px 0 30px 0;
+        margin: 0;
+        width: 100%;
+        padding: 20px 0 35px 0;
+    }
+
+    .contact_input span textarea {
+        margin: 0;
+    }
+
+    .flex {
+        flex-direction: column;
+        /* レスポンシブ対応で入力欄を改行 */
+    }
+
+    .submit {
+        padding: 0;
+        margin: 0;
+    }
+
+    .submit input {
+        margin-top: 20px;
+    }
+
+    .contact_label {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .wpcf7-list-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .wpcf7-list-item:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .wpcf7-list-item label {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .wpcf7-not-valid-tip {
+        margin: 10px
+    }
+
+    .wpcf7 form .wpcf7-response-output {
+        margin: 10px 0 20px 0;
+    }
+
+    /* カレンダー表示 */
+    tr td {
+        display: table-cell;
+        width: 0%;
+    }
+
+    tr td:last-child {
+        border: 0;
+    }
+
+    table tr:last-child td:last-child {
+        border: 0;
+    }
+
+    .ui-datepicker-calendar .ui-datepicker-week-end {
+        padding-left: 1px;
+    }
+
+}

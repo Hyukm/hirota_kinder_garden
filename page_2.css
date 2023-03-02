@@ -1,0 +1,288 @@
+@charset "UTF-8";
+
+
+.day_sec {
+    margin-bottom: 50px;
+}
+
+.day_sec:last-of-type {
+    margin-bottom: 0px;
+}
+
+.day_sec .wrapper img {
+    height: auto;
+    border-radius: 10px;
+}
+
+.day_sec .wrapper .slider_title {
+    border-radius: 20px 0 10px 0;
+}
+
+.flow_detail {
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+}
+
+.flow_time {
+    display: flex;
+    justify-content: start;
+    position: relative;
+}
+
+.day_sec:nth-of-type(even) .flow_time::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #EBA067;
+    width: 1px;
+    height: 2000px;
+    top: 120px;
+    left: 29px;
+}
+
+.day_sec:nth-of-type(odd) .flow_time::after {
+    content: "";
+    position: absolute;
+    border-left: 3px solid #EEC052;
+    width: 1px;
+    height: 2000px;
+    top: 120px;
+    left: 29px;
+}
+
+.day_sec:last-of-type .flow_time::after {
+    content: "";
+    display: none;
+}
+
+.flow {
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+.flow_time h2 {
+    margin: 0;
+    line-height: 40px;
+}
+
+.flow_time h2 span {
+    font-size: 2.2rem;
+    display: block;
+    opacity: 0.4;
+}
+
+.day_sec .wrapper .flow_time img {
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+}
+
+.flow_img {
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.flow_img0 {
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-bottom: 45px;
+    margin-top: 20px;
+}
+
+.flow_img0 .slider_title {
+    bottom: 25px;
+}
+
+.flow_img1 {
+    width: 49%;
+}
+
+.flow_img1 h3 {
+    margin: 0;
+}
+
+.day_sec .wrapper .flow_img1 img {
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.flow_img2 {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flow_img2 h3 {
+    margin: 0;
+}
+
+.flow_img3 {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .flow_img3 .height {
+    height: 49%;
+} */
+
+.day_sec .wrapper .flow_img3 img {
+    height: 100%;
+}
+
+.orange {
+    background-color: #F7D9C2;
+}
+
+.yellow {
+    background-color: #F8E6B9;
+}
+
+.flex_reverse {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.relative {
+    position: relative;
+}
+
+.square {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    /* max-height: 530px; */
+}
+
+.height {
+    /* height: 100%; */
+    height: fit-content;
+}
+
+.day_sec .btn_arrow {
+    position: absolute;
+    opacity: 1;
+    right: 0;
+    bottom: -25px;
+    width: 30rem;
+    background-color: #ED828B;
+}
+
+.flow_img3 .height:first-of-type {
+    margin-bottom: 20px;
+}
+
+/* .img2_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+@media screen and (max-width: 1024px) {
+    .flex_reverse {
+        flex-direction: column-reverse;
+    }
+
+    .flex_reverse2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .flex_column {
+        flex-direction: column;
+    }
+
+    .flow_img1 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .flow_img2 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .flow_img3 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .day_sec .wrapper .flow_detail.flex {
+        display: block;
+    }
+
+    .flow_img {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .flow_top2 {
+        margin-top: 20px;
+    }
+
+    .flow_img1 h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .flow_img2 h3 {
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    .flow_img2 .img2_detail h3 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .flow_img1,.flow_img2,.flow_img3 {
+        margin-top: 0;
+    }
+
+    .flow_top {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .flow {
+        padding-bottom: 5rem;
+    }
+
+    .day_sec .btn_arrow {
+        width: 23rem;
+    }
+
+    /* .flow_img1 h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .flow_img2 h3 {
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    .flow_img2 .img2_detail h3 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .flow_img1,.flow_img2,.flow_img3 {
+        margin-top: 0;
+    }
+
+    .flow_top {
+        margin-top: 20px;
+    } */
+}

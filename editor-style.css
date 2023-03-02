@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* 枠線を指定したボタン */
+.button_grid {
+    border: 3px solid rgb(238, 209, 209);
+    padding: 10px 30px;
+    cursor: pointer;
+}

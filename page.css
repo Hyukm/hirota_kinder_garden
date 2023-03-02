@@ -1,0 +1,1026 @@
+@charset "UTF-8";
+
+/****************************************************************
+    共通
+****************************************************************/
+h1,
+h2 {
+    font-size: 4.4rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+
+.main {
+    background-image: url("../img/back.svg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+.modals {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    text-align: center;
+    background-color: #dbdbdb79;
+}
+
+.sec_gather h2,
+.event_sec h2 {
+    text-align: center;
+    margin: 0 auto 43px;
+    display: inline-block;
+    text-shadow: 0px 0px 10px #FFFFFF80;
+    border-bottom: 2px dotted #ED828B;
+}
+
+/****************************************************************
+    下層ページ共有
+****************************************************************/
+
+/*--------------------------------
+    MV
+--------------------------------*/
+
+.sec_page_title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sec_page_main {
+    position: relative;
+}
+
+.sec_page_main img {
+    /*object-position: 50% 25%;*/
+    min-height: 25rem;
+    aspect-ratio: 20/5;
+    /*0621追加*/
+    object-fit: cover;
+}
+
+.sec_page_main>div {
+    display: inline-block;
+    padding: 0px 33px 0px;
+    background: rgba(102, 92, 84, 0.5);
+    height: fit-content;
+    border-radius: 10px;
+    letter-spacing: 1.73px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    left: 13.54%;
+    font-weight: normal;
+    font-size: 7.5rem;
+    text-align: center;
+}
+
+.sec_page_main h1 {
+    /* display: inline-block; */
+    width: fit-content;
+    /* max-width: 90%; */
+    /* min-width: 370px; */
+    font-size: 4.4rem;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* white-space: nowrap; */
+    padding: 1rem 5rem 0;
+}
+
+.sec_page_title p {
+    width: 60%;
+    max-width: 800px;
+    margin: 5rem auto 0;
+}
+
+.sec_mv_circle {
+    display: inline-block;
+    margin-top: 42px;
+    /* position: absolute; */
+    height: 30px;
+    /* top: 80%;
+    left: 0;
+    right: 0;
+    z-index: 2; */
+}
+
+.sec_mv_circle .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ED828B;
+    margin: 6px;
+}
+
+/****************************************************************
+    年間行事
+****************************************************************/
+
+/*--------------------------------
+    春, 夏, 秋, 冬　共通
+--------------------------------*/
+
+.year_sec_spring h2,
+.year_sec_summer h2,
+.year_sec_autumn h2,
+.year_sec_winter h2 {
+    margin: 0;
+}
+
+.year_sec_spring h2 span,
+.year_sec_summer h2 span,
+.year_sec_autumn h2 span,
+.year_sec_winter h2 span {
+    font-size: 11.7rem;
+}
+
+.year_sec_spring .flex,
+.year_sec_summer .flex,
+.year_sec_autumn .flex,
+.year_sec_winter .flex {
+    flex-wrap: wrap;
+}
+
+.year_large,
+.year_middle,
+.year_short {
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+.year_sec_spring h3,
+.year_sec_summer h3,
+.year_sec_autumn h3,
+.year_sec_winter h3 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.year_sec_spring a,
+.year_sec_summer a,
+.year_sec_autumn a,
+.year_sec_winter a {
+    display: block;
+}
+
+.year_sec_spring .wrapper img,
+.year_sec_summer .wrapper img,
+.year_sec_autumn .wrapper img,
+.year_sec_winter .wrapper img {
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.year_sec_spring .wrapper .flex>a:hover,
+.year_sec_summer .wrapper .flex>a:hover,
+.year_sec_autumn .wrapper .flex>a:hover,
+.year_sec_winter .wrapper .flex>a:hover {
+    opacity: 1;
+    box-shadow: 0 0 15px #00000029;
+}
+
+.year_sec_spring .year_month,
+.year_sec_summer .year_month,
+.year_sec_autumn .year_month,
+.year_sec_winter .year_month,
+.modal .year_month {
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 32px;
+    font-size: 2.6rem;
+    line-height: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.year_sec_spring h3::after,
+.year_sec_summer h3::after,
+.year_sec_autumn h3::after,
+.year_sec_winter h3::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 1px;
+    margin-top: 0.5rem;
+}
+
+.year_large {
+    width: 65.4%;
+}
+
+.year_middle {
+    width: 48.2%;
+}
+
+.year_short {
+    width: 30.9%;
+}
+
+.comment_btn {
+    display: inline-block;
+    border-radius: 26px;
+    font-size: 1.4rem;
+    line-height: 20px;
+    padding: 3.5px 7.5px 4.5px 14.5px;
+    margin-top: 1rem;
+    margin-left: auto;
+    height: 29px;
+}
+
+.wrapper .comment_btn img {
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 7px;
+    width: 21px;
+    height: auto;
+}
+
+.year_short p,
+.year_middle p,
+.year_large p {
+    margin-top: 0px;
+}
+
+.year_month_text {
+    width: 75%;
+    font-size: 1.6rem;
+}
+
+.year_img_flex {
+    width: 100%;
+    align-items: stretch
+}
+
+
+
+/*--------------------------------
+    Slick　共通
+--------------------------------*/
+
+.sec_spring_slick,
+.sec_summer_slick,
+.sec_autumn_slick,
+.sec_winter_slick {
+    height: 500px;
+}
+
+.sec_winter_slick {
+    margin-bottom: 0px;
+}
+
+.slider_year li {
+    height: 100%;
+    width: auto;
+}
+
+.slider_year {
+    margin: 0 auto 66px;
+}
+
+.slider_year img {
+    border-radius: 20px;
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    margin-left: auto;
+}
+
+.slider_box {
+    /* height: 500px; */
+    margin: 0 3rem;
+    position: relative;
+}
+
+.slider_title {
+    background-color: #FFFFFF;
+    font-size: 2rem;
+    border-radius: 20px 0px;
+    /* font-size: 1.5rem; */
+    padding: 1rem 2rem;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 17px 25px 15px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+/* 矢印 */
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+}
+
+.sec_spring_slick .slick-prev,
+.sec_spring_slick .slick-next {
+    background-color: #F5787B
+}
+
+.sec_summer_slick .slick-prev,
+.sec_summer_slick .slick-next {
+    background-color: #69D657
+}
+
+.sec_autumn_slick .slick-prev,
+.sec_autumn_slick .slick-next {
+    background-color: #EB8B67
+}
+
+.sec_winter_slick .slick-prev,
+.sec_winter_slick .slick-next {
+    background-color: #67BFDB
+}
+
+.slick-prev {
+    left: 5.5%;
+}
+
+.slick-next {
+    right: 5.5%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-bottom: solid 3px #ffffff;
+    border-left: solid 3px #ffffff;
+    top: 22px;
+}
+
+.slick-prev:before {
+    transform: rotate(45deg);
+    left: 24px;
+}
+
+.slick-next:before {
+    transform: rotate(225deg);
+    left: 20px;
+}
+
+/*--------------------------------
+    春
+--------------------------------*/
+.year_sec_spring h2 span {
+    color: #F5787B;
+}
+
+.year_sec_spring .year_middle {
+    border: 2px solid #F5787B;
+}
+
+.year_sec_spring h3::after,
+.year_sec_spring .year_month {
+    background-color: #F5787B;
+}
+
+/*--------------------------------
+　　夏
+--------------------------------*/
+.year_sec_summer h2 span {
+    color: #69D657;
+}
+
+#comment_btn_work {
+    position: relative;
+}
+
+.comment_btn_box {
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+}
+
+/* #comment_btn_stay .flex:last-child, #comment_btn_work .flex:last-child {
+    height: calc(100% - 108px);
+} */
+
+.year_sec_summer .year_large,
+.year_sec_summer .year_short {
+    border: 2px solid #69D657;
+}
+
+.year_sec_summer h3::after,
+.year_sec_summer .year_month {
+    background-color: #69D657;
+}
+
+.year_sec_summer .comment_btn {
+    border: 1px solid #69D657;
+}
+
+.year_sec_summer .wrapper .year_7month_img {
+    width: 47.8%;
+}
+
+.year_comment {
+    display: flex;
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+/*--------------------------------
+　　秋
+--------------------------------*/
+.year_sec_autumn h2 span {
+    color: #EB8B67;
+}
+
+.year_sec_autumn .year_large,
+.year_sec_autumn .year_short {
+    border: 2px solid #EB8B67;
+}
+
+.year_sec_autumn h3::after,
+.year_sec_autumn .year_month {
+    background-color: #EB8B67;
+}
+
+.year_sec_autumn .comment_btn {
+    border: 1px solid #EB8B67;
+}
+
+.year_sec_autumn .year_large,
+.year_sec_autumn .year_short {
+    margin-bottom: 45px;
+}
+
+.year_sec_autumn .comment_btn svg {
+    fill: #EB8B67;
+}
+
+
+/*--------------------------------
+　　冬
+--------------------------------*/
+.year_sec_winter h2 span {
+    color: #67BFDB;
+}
+
+.year_sec_winter .year_middle {
+    border: 2px solid #67BFDB;
+}
+
+.year_sec_winter h3::after,
+.year_sec_winter .year_month {
+    background-color: #67BFDB;
+}
+
+.year_sec_winter .comment_btn {
+    border: 1px solid #67BFDB;
+}
+
+/*--------------------------------
+    テーブル共通
+--------------------------------*/
+
+table:not(.ui-datepicker-calendar) {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    color: #292B29;
+    text-align: left;
+    margin-top: 43.4px;
+}
+
+table:not(.ui-datepicker-calendar) tr,
+table:not(.ui-datepicker-calendar) td {
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+table:not(.ui-datepicker-calendar) td {
+    background: #E8E3DD;
+    font-weight: bold;
+    padding: 1rem 1em;
+}
+
+table:not(.ui-datepicker-calendar) tbody tr td:last-child {
+    background: transparent;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(102, 92, 84, 0.5);
+}
+
+table:not(.ui-datepicker-calendar) thead td {
+    background-color: #8A827A;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+/*--------------------------------
+    保護者様に参加をお願いしている行事
+--------------------------------*/
+.event_sec {
+    padding-top: 10rem;
+}
+
+.event_sec .wrapper,
+.sec_gather .wrapper {
+    text-align: center;
+}
+
+.event_sec .wrapper p,
+.sec_gather .wrapper p {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0 auto;
+}
+
+.event_sec thead tr td:first-child {
+    width: 17%;
+}
+
+.event_sec thead tr td:last-child {
+    width: 60%;
+}
+
+
+/*--------------------------------
+    父母の会について
+--------------------------------*/
+.sec_gather {
+    padding-top: 10rem;
+}
+
+.sec_gather p {
+    width: 70%;
+    min-width: 800px;
+}
+
+.sec_gather thead tr td:first-child {
+    width: 25%;
+}
+
+.sec_gather thead tr td:last-child {
+    width: 75.5%;
+}
+
+.sec_gather table {
+    margin-bottom: 130px;
+}
+
+/*--------------------------------
+    モーダル
+--------------------------------*/
+
+.modal {
+    max-width: 892px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    max-height: 60vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    max-width: 892px;
+    width: 90%;
+}
+
+.modal_stay,
+.modal_work {
+    border: 2px solid #69D657;
+}
+
+.modal_play,
+.modal_shop {
+    border: 2px solid #EB8B67;
+}
+
+.modal_music {
+    border: 2px solid #67BFDB;
+}
+
+.modal>.flex:first-child {
+    margin-bottom: 16.5px;
+}
+
+.modal h3 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.modals .btn_stay,
+.btn_work,
+.modal_stay h3::after,
+.modal_work h3::after,
+.modal_stay .year_month,
+.modal_work .year_month {
+    background-color: #69D657;
+}
+
+.btn_shop,
+.btn_play,
+.modal_shop h3::after,
+.modal_play h3::after,
+.modal_play .year_month,
+.modal_shop .year_month {
+    background-color: #EB8B67;
+}
+
+.btn_music,
+.modal_music h3::after,
+.modal_music .year_month {
+    background-color: #67BFDB;
+}
+
+#back_stay:hover,
+#back_work:hover {
+    background-color: #fff;
+    color: #69D657;
+    border-color: #69D657;
+}
+
+#back_shop:hover,
+#back_play:hover {
+    background-color: #fff;
+    color: #EB8B67;
+    border-color: #EB8B67;
+}
+
+#back_music:hover {
+    background-color: #fff;
+    color: #67BFDB;
+    border-color: #67BFDB;
+}
+
+.modal h3::after,
+.modal h3::after,
+.modal h3::after,
+.modal h3::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 1px;
+    margin-top: 2rem;
+}
+
+.modal h4,
+.modal p {
+    font-size: 1.6rem;
+}
+
+.modal_work h4::before {
+    background-color: #69D657;
+}
+
+.modal_shop h4::before,
+.modal_play h4::before {
+    background-color: #EB8B67;
+}
+
+.modal h4::before {
+    content: '';
+    display: inline-block;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    transform: translateY(3px);
+    margin-right: 10px;
+}
+
+.modal img {
+    width: 136px;
+    height: auto;
+    object-fit: contain;
+    float: right;
+    margin: 0px 0px 20px 30px;
+}
+
+.modal .flex {
+    margin-bottom: 34px;
+}
+
+.modals .btn_circle {
+    text-align: center;
+    padding: 4px 70px;
+    margin-top: 30px;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.modal .year_month_text {
+    width: 100%;
+}
+
+.main .modal_hidden {
+    display: none;
+}
+
+
+/*--------------------------------
+    レスポンシブ
+--------------------------------*/
+
+@media screen and (max-width: 1300px) {
+    .sec_page_main h1 {
+        /* padding-top: 20px; */
+        /* font-size: 3.0rem; */
+    }
+
+    .sec_page_main>div {
+        font-size: 6rem;
+        /* height: 100px; */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sec_page_main img {
+        object-fit: cover;
+        min-height: 25rem;
+        aspect-ratio: 20/5;
+    }
+
+    /* .sec_page_main > div {
+        left: 50%;
+        transform: translateX(-50%);
+    } */
+
+    .year_month_text {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .year_sec_spring .flex>img,
+    .year_sec_summer .flex>img,
+    .year_sec_autumn .flex>img,
+    .year_sec_winter .flex>img {
+        width: 30%;
+    }
+
+    .year_sec_summer .flex>.year_7month_img {
+        width: 60%;
+    }
+
+    .year_large .flex:last-child,
+    .year_middle .flex:last-child,
+    .year_short .flex:last-child {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sec_spring_slick,
+    .sec_summer_slick,
+    .sec_autumn_slick,
+    .sec_winter_slick {
+        height: 400px;
+    }
+
+    .slider_year img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sec_page_main>div {
+        font-size: 6rem;
+    }
+
+    .year_sec_spring .wrapper>.flex,
+    .year_sec_summer .wrapper>.flex,
+    .year_sec_autumn .wrapper>.flex,
+    .year_sec_winter .wrapper>.flex {
+        justify-content: center;
+    }
+
+    .year_large,
+    .year_middle,
+    .year_short {
+        width: 100%;
+    }
+
+    .sec_gather p {
+        min-width: 600px;
+    }
+
+    .main {
+        background-position: left top 21rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .sec_page_main>div {
+        font-size: 5.0rem;
+        left: 5%;
+        right: 5%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    h1,
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .main {
+        background-image: url("../img/back_sp.svg");
+        background-position: left top 36rem;
+    }
+
+    .modal .flex {
+        display: flex;
+    }
+
+    .modal_content {
+        top: 60%;
+    }
+
+    .modal img {
+        width: 80px;
+    }
+
+    .year_sec_spring .flex,
+    .year_sec_summer .flex,
+    .year_sec_autumn .flex,
+    .year_sec_winter .flex {
+        display: flex;
+    }
+
+    .year_sec_spring h2 span,
+    .year_sec_summer h2 span,
+    .year_sec_autumn h2 span,
+    .year_sec_winter h2 span {
+        font-size: 8rem;
+    }
+
+    .year_sec_spring .wrapper h2,
+    .year_sec_summer .wrapper h2,
+    .year_sec_autumn .wrapper h2,
+    .year_sec_winter .wrapper h2 {
+        font-size: 3rem;
+    }
+
+    .year_sec_summer .wrapper .year_9month_img {
+        margin-bottom: 40px;
+    }
+
+    /* .sec_page_main > div {
+        font-size: 5.0rem; */
+    /* height: 90px; */
+    /* left: 5%;
+        right: 5%;
+        margin: auto;
+    } */
+
+    .sec_page_main>div {
+        font-size: 4rem;
+    }
+
+    .sec_page_main h1 {
+        width: 90%;
+        font-size: 3.0rem;
+        padding: 1rem 0 0;
+    }
+
+    .sec_page_title p {
+        width: 90%;
+    }
+
+    .year_large .flex:last-child,
+    .year_middle .flex:last-child,
+    .year_short .flex:last-child {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .year_sec_spring .flex>img,
+    .year_sec_summer .flex>img,
+    .year_sec_autumn .flex>img,
+    .year_sec_winter .flex>img {
+        width: 50%;
+    }
+
+    table {
+        border-spacing: 0px;
+    }
+
+    td {
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    tr td:last-child {
+        padding-left: 16px;
+        text-align: left;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr td {
+        display: block;
+        width: 100%;
+    }
+
+    tr td:last-child {
+        padding-left: 16px;
+        text-align: left;
+        border-left: 1px solid rgba(102, 92, 84, 0.5);
+        border-right: 1px solid rgba(102, 92, 84, 0.5);
+        border-bottom: none;
+    }
+
+    table tr:last-child td:last-child {
+        border-bottom: 1px solid rgba(102, 92, 84, 0.5);
+    }
+
+    .event_sec {
+        padding-top: 90px;
+    }
+
+    .sec_gather {
+        padding-top: 90px;
+    }
+
+    .sec_gather p {
+        width: 90%;
+        min-width: 350px;
+    }
+
+    .sec_gather table {
+        margin-bottom: 5rem;
+    }
+
+    .event_sec tr td:nth-last-child(3) {
+        background-color: #8A827A;
+        color: white;
+        margin-top: 1rem;
+    }
+
+    .sec_spring_slick,
+    .sec_summer_slick,
+    .sec_autumn_slick,
+    .sec_winter_slick {
+        /* height: 300px;  */
+        height: auto;
+    }
+
+    .slider_title {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .slider_year img {
+        height: auto;
+        width: 100%;
+    }
+
+    .slider_box {
+        height: auto;
+        width: 90vw;
+    }
+}
